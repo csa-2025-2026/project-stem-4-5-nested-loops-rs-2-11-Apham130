@@ -4,14 +4,14 @@ public class Main
 {
   public static void main(String[] args)
   {
-    // Make sure to test your methods here
-    // printNTimes("hello", 5);
-    // printNums(10, 1);
-    // uprightNumberTriangle(5);
+    printNTimes("hello", 5);
+    printNums(10, 1);
+    uprightNumberTriangle(5);
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter an int: ");
     int input = sc.nextInt();
     starTree(input);
+    multTable();
 
   }
 
@@ -67,11 +67,11 @@ public class Main
 
   public static void multTable()
   {
-    int j = 1;
     for (int i = 1; i <= 10; i++) {
-      
-      
-      j++
+      for (int k = 1; k <= 10; k++) {
+        System.out.print(i * k + " ");
+      }
+      System.out.println();
     }
   }
 }
