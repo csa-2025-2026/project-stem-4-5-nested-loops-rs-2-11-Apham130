@@ -4,15 +4,15 @@ public class Main
 {
   public static void main(String[] args)
   {
-    printNTimes("hello", 5);
-    printNums(10, 1);
-    uprightNumberTriangle(5);
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter an int: ");
     int input = sc.nextInt();
-    starTree(input);
-    multTable();
-
+    // printNTimes("hello", 5);
+    // printNums(10, 1);
+    uprightNumberTriangle(input);
+    // starTree(input);
+    // multTable();
+    sc.close();
   }
 
   public static void printNTimes(String word, int N)
@@ -50,18 +50,14 @@ public class Main
 
   public static void starTree(int N)
   {
-    int j = 0;
-    int y = N;
     for (int x = 0; x < N; x++) {
-      for (int k = 0; k < j; k++) {
+      for (int k = 0; k < x; k++) {
           System.out.print(" ");
         }
-      for (int i = y; i > 0; i--) { 
+      for (int i = N - x; i > 0; i--) { 
         System.out.print("* ");
       }
       System.out.println();
-      j++;
-      y--;
     }
   }
 
